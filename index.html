@@ -12,6 +12,9 @@
 		p {
 			font-size: 18px;
 			line-height: 140%;
+			text-indent: 0;
+			margin-top: 20px;
+			margin-bottom: 8px;
 		}
 		h1 {
 			padding: 0;
@@ -29,12 +32,13 @@
 			font-size: 18px;
 		}
 		ul {
-			margin-top: 5px;
-			margin-bottom: 10px;
+			margin-top: 0px;
+			margin-bottom: 5px;
 		}
 		ul li {
 			padding: 5px 0;
 			margin-top: 0;
+			font-size: 18px;
 		}
 		.main { float: right ; width: 70%; }
 		.title {
@@ -52,10 +56,10 @@
 			clear: both;
 		}
 		#bio {
-			height: 200px;
+			height: 300px;
 			position: relative;
 			float: left;
-			width: 600px;
+			width: 650px;
 			left:80px;
 		}
 		#sidebar {
@@ -65,6 +69,34 @@
 			float: left;
 			margin-bottom: 0;
 		}
+		.paper {
+			width: 1100px;
+			margin: 10px auto;
+			border-radius: 10px;
+			padding: 10px;
+			clear: both;
+		}
+		.title{
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 20px;
+			margin-bottom: 0px;			
+		}
+		.author{
+			font-size: 18px;
+			margin-top: 5px;
+			margin-bottom: 0px;	
+		}
+		.note{
+			font-size: 18px;
+			margin-top: 5px;
+			margin-bottom: 5px;	
+		}
+		.misc{
+			font-size: 18px;
+			margin-top: 15px;
+			margin-bottom: 5px;	
+		}		
 		a {
 			text-decoration: none;
 		}
@@ -75,8 +107,21 @@
 		a:visited {
 			color: #3366cc;
 		}
+		a.black{
+			color:black;
+		}
 
 	</style>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-77517955-1");
+			pageTracker._trackPageview();
+		} catch (err) {}
+	</script>
 </head>
 
 <body>
@@ -94,12 +139,20 @@
 				<TD>
 					<div id="bio">
 					<h1>Yuting Fang</h1>
-					<p> lastname.564@osu.edu  </p>
+					<p> lastname.564@osu.edu </p>
 					&nbsp;
-					<p> I am a PhD student at The Ohio State University <a href="https://cse.osu.edu" target="_blank">CSE department</a>, 
-						<br> where I am fortunate to be supervised by 
+					<p> I am a PhD student at The Ohio State University CSE department, 
+						where I am fortunate to be supervised by 
 						<a href="https://pooyahatami.org/" target="_blank">Pooya Hatami </a>.
-					<p> I am broadly interested in Theoretical Computer Science.</p>
+						I received B.S. Dual Degree in Mathematics and Computer Science from Ohio State in 2021.
+
+					<p> I am broadly interested in Theoretical Computer Science, particularly:
+						<ul>
+							<li><a class="black" href ="https://www.ias.edu/ideas/2009/wigderson-randomness-pseudorandomness">Randomness and Pseudorandomness</a></li>
+							<li>Communication Complexity</li>
+						</ul>
+					
+					</p>
 					</div>
 				</TD>
 			</tr>
@@ -107,20 +160,35 @@
 
 	</div>
 
+	<!--Publication-->
+	<div class="container">
+		<h2>Publication</h2>
+		<hr>
+		<div id="paper">
+			<p class="title">No Complete Problem for Constant-Cost Randomized Communication</p>
+			<p class="author">with <a class="black" href = "https://www.cs.mcgill.ca/~lhamba/">Lianna Hambardzumyan</a>, 
+								<a class="black" href = "https://niharms.github.io/">Nathan Harms</a>, Pooya Hatami</p>
+			<p class="note">STOC 2024 [<a href = "https://arxiv.org/abs/2404.00812">arXiv</a>] </p>
+		</div>
+	</div>
+
+
+
 	<!--Teaching-->
 	<div class="container">
 		<h2>Teaching</h2>
 		<hr>
-		<p>CSE 6321 - Computability and Complexity (TA, SP23) </p>
-		<p>MATH 3607 - Beginning Scientific Computing (TA, AU21, SP21, AU22) </p>
+		<p class="misc">CSE 6321 - Computability and Complexity (TA, SP23) </p>
+		<p class="misc" >MATH 3607 - Beginning Scientific Computing (Grader, AU21, SP21, AU22) </p>
 	</div>
 
 	<!--Misc-->
 	<div class="container">
 		<h2>Misc</h2> 
 		<hr>
-		<p>In my spare time I like to play tennis, climb and kayak.</p>
-		<p>Check <a href=https://curly-moose-dab.notion.site/Travel-Album-022cd6fc26784b36b29bbe82af025100 target="_blank">Travel Album</a> of my family.</p>
+		<p class="misc">In my spare time I like to play tennis and climb.</p>
+		<p class="misc">Check <a href=https://www.notion.so/Yuting-Family-Travel-Album-022cd6fc26784b36b29bbe82af025100 target="_blank">Travel Album</a> of my family.</p>
+	
 	</div>
 
 </body>
